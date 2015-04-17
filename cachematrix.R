@@ -12,7 +12,7 @@
 makeCacheMatrix <- function(x = matrix()) {         
         i <- NULL
         # initialisation of set, get, setsolve, getsolve as functions
-        ## <<- causes a search to made through parent environments 
+        ## assignment <<- causes a search to be made through parent environments 
         ##     for an existing definition of the variable being assigned
         set <- function(y) {
                 x <<- y
@@ -29,9 +29,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
 	i <- x$getsolve()
-    ## it first checks to see if the inverse has already been calculated.
+	## it first checks to see if the inverse has already been calculated.
 	if(!is.null(i)) {
-	        ## If so, it gets the inverse from the cache and skips the computation
+			## If so, it gets the inverse from the cache and skips the computation
             message("getting cached data")
             return(i) 
 	}
