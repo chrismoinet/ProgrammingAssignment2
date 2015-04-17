@@ -31,14 +31,14 @@ cacheSolve <- function(x, ...) {
 	i <- x$getsolve()
 	## it first checks to see if the inverse has already been calculated.
 	if(!is.null(i)) {
-		## If so, it gets the inverse from the cache and skips the computation
-            message("getting cached data")
-            return(i) 
+			## If so, it gets the inverse from the cache and skips the computation
+			message("getting cached data")
+			return(i) 
 	}
 	## Otherwise, it calculates the inverse of the data 
 	## and sets the value of the inverse in the cache using the setsolve function.
-    data <- x$get()
-    i <- solve(data, ...)
-    x$setsolve(i)
-    i     
+	data <- x$get()
+	i <- solve(data, ...)
+	x$setsolve(i)
+	i     
 }
