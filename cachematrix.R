@@ -4,7 +4,7 @@
 ## for a big matrix, if it has to be computed repeatedly (e.g. in a loop)                           ##
 ## it may take too long to compute the inverse                                                      ##
 ## If the contents of a matrix are not changing, it may make sense to cache the value of the inverse## 
-## so that when we need it again, it can be looked up in the cache rather than recomputed           ##
+## so that when we need it again, it can be looked up in the cache rather than recomputed.          ##
 ######################################################################################################
 
 ## makeCacheMatrix creates a special matrix object that can cache its inverse.
